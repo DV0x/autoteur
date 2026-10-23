@@ -1,0 +1,23 @@
+packages:
+  - apps/*
+
+# Skip any version published less than a day ago, so a poisoned release has time to be caught before it lands here.
+minimumReleaseAge: 1440
+
+# Install scripts stay off. These were read on Oct 23 and none is needed. Carbon's two send IBM telemetry,
+# esbuild and sharp only check their prebuilt binaries, protobufjs checks its version and genai's does nothing.
+ignoredBuiltDependencies:
+  - "@carbon/icon-helpers"
+  - "@carbon/icons-react"
+  - "@google/genai"
+  - esbuild
+  - protobufjs
+  - sharp
+
+# Carried over from Dreamverse's npm overrides, so apps/web installs what it was tested with.
+overrides:
+  esbuild: 0.25.12
+  picomatch: 4.0.4
+  postcss: 8.5.10
+  rollup: 4.59.0
+  vite: 7.3.2

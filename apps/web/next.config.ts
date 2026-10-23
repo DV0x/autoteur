@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
   experimental: { middlewareClientMaxBodySize: 100 * 1024 * 1024 },
   ...(staticExport ? { output: 'export' as const } : {}),
   ...(staticExport ? { images: { unoptimized: true } } : {}),
-  outputFileTracingRoot: path.join(configDir, '..', '..', '..'),
+  outputFileTracingRoot: path.join(configDir, '..', '..'),
   ...(staticExport ? {} : { async rewrites() {
     return [
       { 

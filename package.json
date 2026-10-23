@@ -1,0 +1,17 @@
+{
+  "name": "autoteur",
+  "private": true,
+  "description": "A video agent on ComfyUI. Give it a product link and direct the ad on one board.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "pnpm@10.34.7",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "dev": "pnpm --filter @autoteur/web dev",
+    "smoke": "pnpm --filter @autoteur/agent smoke",
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
