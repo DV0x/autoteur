@@ -1,0 +1,30 @@
+# Keys. Never committed.
+.env
+.env.*
+!.env.example
+*.token
+
+# Everything the agent makes at run time: the durable store, product photos, stills, clips, voice
+/data/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Dependencies and builds
+node_modules/
+.next/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Test output
+test-results/
+playwright-report/
+blob-report/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
